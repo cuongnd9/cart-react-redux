@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Showcase from './components/Showcase';
 import ProductsContainer from './containers/ProductsContainer';
 import Message from './components/Message';
-import Cart from './components/Cart';
+import CartContainer from './containers/CartContainer';
 import Footer from './components/Footer';
 
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
         {/*Message & Cart*/}
         <div className="container">
           <Message/>
-          <Cart/>
+          <CartContainer/>
         </div>
 
         <Footer/>

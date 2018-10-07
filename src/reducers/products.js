@@ -82,11 +82,11 @@ var initialState = [
   },
 ];
 
-const Products = (state = initialState, action) => {
+const products = (state = initialState, action) => {
   switch (action.type) {
     default:
       return [...state];
   }
 };
 
-export default Products;
+export default products;

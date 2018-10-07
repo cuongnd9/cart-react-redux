@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 class CartResult extends Component {
   render() {
+    var {totalPrice} = this.props;
+    console.log(totalPrice);
     return (
       <tr>
           <td colSpan="3"></td>
@@ -12,11 +14,11 @@ class CartResult extends Component {
           </td>
           <td>
               <h4>
-                  <strong>$15,395</strong>
+                  <strong>${totalPrice}</strong>
               </h4>
           </td>
           <td colSpan="3">
-              <button type="button" className="btn btn-info waves-effect waves-light">Complete purchase
+              <button type="button" className="btn btn-danger waves-effect waves-light">Complete purchase
                   <i className="fa fa-angle-right right"></i>
               </button>
           </td>
