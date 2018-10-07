@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import Showcase from './components/Showcase';
-import Products from './components/Products';
+import ProductsContainer from './containers/ProductsContainer';
 import Message from './components/Message';
 import Cart from './components/Cart';
 import Footer from './components/Footer';
@@ -16,7 +16,7 @@ class App extends Component {
           <div className="row">
             <div className="col-lg-12">
               <Showcase/>
-              <Products/>
+              <ProductsContainer/>
             </div>
           </div>
         </div>
