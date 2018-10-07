@@ -2,23 +2,39 @@ import React, { Component } from 'react';
 
 class Product extends Component {
   render() {
+    var {product} = this.props;
     return (
       <div className="col-lg-4 col-md-6 mb-4">
         <div className="card h-100">
-          <a href="https://github.com/ndc07"><img className="card-img-top" src="http://images.ctfassets.net/o6sr41tx16eu/3LYwlGMCkwwIyQeOmaUg04/62d85640daa995211d666728fcffb793/Monster-797_MY18-White-01-Book-testride_630x390.jpg" alt=""/></a>
+          <a href="https://github.com/ndc07"><img className="card-img-top" src={product.image} alt={product.name}/></a>
           <div className="card-body">
             <h4 className="card-title">
-              <a href="https://github.com/ndc07">Monster 797</a>
+              <a href="https://github.com/ndc07">{product.name}</a>
             </h4>
-            <h5>$9,295</h5>
-            <p className="card-text">The Monster 797 is the entrance to the Ducati world with its values, style, sophistication, and performance. It sporty, essential, easy to ride, but never intimidating — all you need to have undemanding fun.</p>
+            <h5>${product.price}</h5>
+            <p className="card-text">{product.description}</p>
           </div>
-          <div className="card-footer">
-            <small className="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+          <div className="card-footer text-center">
+            {this.showRating(product.rating)}
+            <div className="btn-group center-block" role="group" aria-label="Basic example">
+              <button type="button" className="btn btn-danger">Add to cart</button>
+              <button type="button" className="btn btn-seconary">More details</button>
+            </div>
           </div>
         </div>
       </div>
     );
+  }
+
+  showRating(rating) {
+    var result = '';
+    for (let i = 0; i < rating; i++) {
+      result += '★ ';
+    }
+    for (let i = 0; i < 5 - rating; i++) {
+      result += '☆ ';
+    }
+    return <p className="text-muted">{result}</p>;
   }
 }
 
