@@ -17,13 +17,17 @@ class Product extends Component {
           <div className="card-footer text-center">
             {this.showRating(product.rating)}
             <div className="btn-group center-block" role="group" aria-label="Basic example">
-              <button type="button" className="btn btn-danger">Add to cart</button>
+              <button type="button" className="btn btn-danger" onClick={() => this.onAddToCart(product)}>Add to cart</button>
               <button type="button" className="btn btn-seconary">More details</button>
             </div>
           </div>
         </div>
       </div>
     );
+  }
+
+  onAddToCart = (product) => {
+    this.props.onAddToCart(product);
   }
 
   showRating(rating) {

@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 class CartResult extends Component {
   render() {
     var {totalPrice} = this.props;
-    console.log(totalPrice);
     return (
       <tr>
           <td colSpan="3"></td>
