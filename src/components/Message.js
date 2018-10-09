@@ -4,7 +4,7 @@ class Message extends Component {
   render() {
     return (
       <h3 className="bg-success">
-          Order successful!
+          {this.props.children}
       </h3>
     );
   }

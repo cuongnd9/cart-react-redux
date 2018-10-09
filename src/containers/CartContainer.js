@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Cart from './../components/Cart';
 import CartItem from './../components/CartItem';
 import CartResult from './../components/CartResult';
-import * as messages from './../constants/Message';
+import * as messages from './../constants/Messages';
 
 class CartContainer extends Component {
   render() {
@@ -18,7 +18,9 @@ class CartContainer extends Component {
   }
 
   showCartItem(cart) {
-    var result = messages.MSG_CART_EMPTY;
+    var result = <tr>
+                   <td><p>{messages.MSG_CART_EMPTY}</p></td>
+                 </tr>;
     if (cart.length > 0) {
       result = cart.map((cartItem, index) => {
         return <CartItem key={index} cartItem={cartItem}/>
