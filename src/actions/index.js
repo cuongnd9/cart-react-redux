@@ -19,5 +19,13 @@ export const actDeleteProduct = product => {
   return {
     type: types.DELETE_PRODUCT,
     product
-  }
-}
+  };
+};
+
+export const atcUpdateProductInCart = (product, quantity) => {
+  return {
+    type: types.UPDATE_PRODUCT_IN_CART,
+    product,
+    quantity
+  };
+};

@@ -80,6 +80,15 @@ var initialState = [
     rating: 5,
     inventory: 450
   },
+  {
+    id: 10,
+    name: 'HYPERMOTARD 939',
+    image: 'https://images.ctfassets.net/28uk7b0wvnz9/3Axmei5mYMkmG2UGssKQQM/3e7a54294e99efc3055561b46cfea11d/Hyper-939-MY18-Red-Model-Preview-1050x650.png',
+    description: 'The Hypermotard 939 series includes Power Modes and Full Ride by Wire. Available in the two Ducati Red colours with red frame and black rims and Star White Silk with red rims and black frame.',
+    price: 24695,
+    rating: 5,
+    inventory: 450
+  }
 ];
 
 const products = (state = initialState, action) => {

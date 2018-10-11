@@ -5,7 +5,7 @@ class Cart extends Component {
     var {children} = this.props;
     return (
       <section className="section">
-          <div className="table-responsive">
+          <div className="table-responsive table-bordered">
               <table className="table product-table">
                   <thead>
                       <tr>
@@ -14,7 +14,7 @@ class Cart extends Component {
                           <th>Price</th>
                           <th>Quantity</th>
                           <th>Total Price</th>
-                          <th></th>
+                          <th>Actions</th>
                       </tr>
                   </thead>
                   <tbody>{children}</tbody>
