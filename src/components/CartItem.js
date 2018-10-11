@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
+import * as messages from './../constants/Messages';
 
 class CartItem extends Component {
+  onDelete = product => {
+    this.props.onDelete(product);
+    this.props.onChangeMessage(messages.MSG_DELETE_PRODUCT_IN_CART_SUCCESS);
+  }
+
   render() {
     var {product, quantity} = this.props.cartItem;
     return (
       <tr>
           <th scope="row">
-              <img width="450" alt="" src={product.image} />
+              <img width="400" alt="" src={product.image} />
           </th>
           <td>
               <h5>
@@ -31,8 +37,13 @@ class CartItem extends Component {
           </td>
           <td>${product.price * quantity}</td>
           <td>
-              <button type="button" className="btn btn-sm btn-danger waves-effect waves-light" data-toggle="tooltip" data-placement="top"
-                  title="" data-original-title="Remove item">
+              <button
+                type="button"
+                className="btn btn-sm btn-danger"
+                data-toggle="tooltip" data-placement="top"
+                data-original-title="Remove item"
+                onClick={ () => this.onDelete(product)}
+                >
                   <i className="material-icons">delete</i>
               </button>
           </td>
